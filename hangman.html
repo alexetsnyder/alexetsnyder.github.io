@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hangman</title>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="hangman_functions.js"></script>
+<script src="hangman_main.js"></script>
+<link rel="stylesheet" type="text/css" href="hangman_style.css"/>
+</head>
+<body>
+<h1 align="center">Hangman</h1>
+<img src="hang0.png"></img>
+<h3 id="winner">You Win!</h3>
+<h3 id="loser">You Lose!</h3>
+<br>
+<div id="theword"></div>
+<br>
+<table align="center">
+	<tr>
+		<td id="a"> A </td>
+		<td id="b"> B </td>
+		<td id="c"> C </td>
+		<td id="d"> D </dt>
+		<td id="e"> E </td>
+		<td id="f"> F </td>
+	</tr>
+	<tr>
+
+		<td id="g"> G </td>
+		<td id="h"> H </td>
+		<td id="i"> I </td>
+		<td id="j"> J </td>
+		<td id="k"> K </td>
+		<td id="l"> L </td>
+	</tr>
+	<tr>
+		<td id="m"> M </td>
+		<td id="n"> N </td>
+		<td id="o"> O </td>
+		<td id="p"> P </td>
+		<td id="q"> Q </td>
+		<td id="r"> R </td>
+	</tr>
+	<tr>
+		<td id="s"> S </td>
+		<td id="t"> T </td>
+		<td id="u"> U </td>
+		<td id="v"> V </td>
+		<td id="w"> W </td>
+		<td id="x"> X </td>
+	</tr>
+	<tr>
+		<td> </td>
+		<td> </td>
+		<td id="y"> Y </td>
+		<td id="z"> Z </td>
+	</tr>
+</table>
+<div align="center">
+<input type="text" id="sub_name" placeholder="Enter Name here."/>
+<button id="name">Submit Name!</button>
+<button id="reset">New Word!</button>
+<button id="rules">Rules!</button>
+</div>
+<br>
+<p>
+<span style="font-weight: bold;">The Rules</span> <br>
+A random word is chosen and each letter is displayed as a blank. <br>
+Choose different letters by clicking on the letters on the screen. <br>
+Once a letter is chosen it disappears. You must spell out the word <br>
+to win, but if you make more than six wrong guesses than you lose. <br>
+Each time you make a wrong guess more pieces are added to the stick  <br>
+person on the gallows. When the stick person is completely drawn you lose.
+</p>
+<br>
+<div id="table">Winners: </div>
+<div id="win_table" style="font-size: 100%;"></div>
+</body>
+</html>
