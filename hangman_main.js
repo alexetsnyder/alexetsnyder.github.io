@@ -1,6 +1,8 @@
 $(function(){
 	start_game();
 	$("td").click(function(){
+		if (this.id == "")
+			return;
 		$("#"+this.id).hide();
 		if (is_in_word(this.id))
 		{
@@ -8,7 +10,9 @@ $(function(){
 			if (is_game_over())
 			{
 				$("#winner").show();
+				$("#ether").hide();
 				$("td").hide();
+				$("#reset").show();
 			}
 		}
 		else
@@ -18,7 +22,9 @@ $(function(){
 			{
 				show_word();
 				$("#loser").show();
+				$("#ether").hide();
 				$("td").hide();
+				$("#reset").show();
 			}
 		}	
 	});

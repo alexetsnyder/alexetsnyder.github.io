@@ -59,11 +59,13 @@ function hide_html(){
 	$("#name").hide();
 	$("#sub_name").hide();
 	$("h3").hide()
+	$("#reset").hide();
 }
 
 function show_html(){
 	$("#rules").show();
 	$("td").show();
+	$("#ether").show();
 }
 
 function start_game(){
