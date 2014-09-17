@@ -24,6 +24,69 @@ var words = ["cat", "dog", "water", "river", "time", "pencil",
 
 var tries, right, word;
 
+//Functions used in the hangman main.
+function start_game(){
+	hide_html();
+	tries = 0;
+	word = random_word();
+	right = new Array();
+	$("#theword").empty();
+	$("img").attr("src", "hang0.png");
+	show_html();
+	display_word();
+}
+
+function display_word(){
+	//show only letters guessed right.
+	$("#theword").empty();
+	for (var i = 0; i < word.length; ++i)
+	{
+		if (contains(right, word[i]))
+			$("#theword").append(word[i], " ");
+		else
+			$("#theword").append("_ ");
+	}
+}
+
+function is_in_word(letter){
+	if (contains(word, letter))
+	{
+		right.push(letter);
+		return true;
+	}
+	else
+		return false;
+}
+
+function wrong_guess(){
+	++tries;
+	hangman();
+}
+		
+function is_game_over(){
+	if (contains_all(right, word) || tries == 6)
+		return true;
+	else
+		return false;
+}
+
+function win(){
+	$("#winner").show();
+	$("#ether").hide();
+	$("td").hide();
+	$("#reset").show();
+}
+
+function lose(){
+	show_word();
+	$("#loser").show();
+	$("#ether").hide();
+	$("td").hide();
+	$("#reset").show();
+}
+//End of Functions used in hangman main.
+
+//Hidden functions not used in the main.
 function random_word(){
 	var choice = Math.floor(Math.random() * words.length);
 	return words[choice];
@@ -58,7 +121,7 @@ function contains_all(array1, array2){
 function hide_html(){
 	$("#name").hide();
 	$("#sub_name").hide();
-	$("h3").hide()
+	$("h2").hide()
 	$("#reset").hide();
 }
 
@@ -68,57 +131,19 @@ function show_html(){
 	$("#ether").show();
 }
 
-function start_game(){
-	hide_html();
-	tries = 0;
-	word = random_word();
-	right = new Array();
-	$("#theword").empty();
-	$("img").attr("src", "hang0.png");
-	show_html();
-	display_word();
-}
-
 function hangman(){
 	$("img").attr("src", ("hang" + tries + ".png"));
 }	
-
-function display_word(){
-	//show only letters guessed right.
-	$("#theword").empty();
-	for (var i = 0; i < word.length; ++i)
-	{
-		if (contains(right, word[i]))
-			$("#theword").append(word[i], " ");
-		else
-			$("#theword").append("_ ");
-	}
-}
 
 function show_word(){
 	//Shows complete word.
 	right = word;
 	display_word();
 }
+//End of Hidden functions.
 
-function is_in_word(letter){
-	if (contains(word, letter))
-	{
-		right.push(letter);
-		return true;
-	}
-	else
-		return false;
-}
 
-function wrong_guess(){
-	++tries;
-	hangman();
-}
-		
-function is_game_over(){
-	if (contains_all(right, word) || tries == 6)
-		return true;
-	else
-		return false;
-}
+
+
+
+
