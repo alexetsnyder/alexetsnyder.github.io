@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple App</title>
+<script src="jquery-1.11.1.min.js"></script>
+<style> 
+div {
+	font-weight: bold;
+	font-size: 100%;
+	color: red;
+}
+</style>
+<script> 
+$(function(){
+	$("button").click(function(){
+		var text = $("input").val();
+		if (text == "")
+			return;
+		else
+		{	
+			$("#top").remove();
+			$("#bottom").append(text.toUpperCase());
+		}	
+	});
+});
+</script>
+</head>
+<body>
+<div id="top">This is Some Text.</div>
+<br>
+<input type="text" placeholder="Enter New Text."></input>
+<button>Change</button>
+<br>
+<br>
+<div id="bottom"></div>
+</body>
+</html>
