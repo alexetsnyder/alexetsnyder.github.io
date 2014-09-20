@@ -28,8 +28,10 @@ function rect(id, width, height, posX, posY, speed, color){
 	this.posX = posX !== undefined ? posX : 20;
 	this.posY = posY !== undefined ? posY : 10;
 	this.color = color !== undefined ? color : random_color();
-	this.speedX = speed !== undefined ? speed : 10;
-	this.speedY = this.speedX;
+	var sign1 = [1, -1][Math.floor(Math.random() * 2)];
+	var sign2 = [1, -1][Math.floor(Math.random() * 2)];
+	this.speedX = speed !== undefined ? (sign1 * speed) : (sign1 * 10);
+	this.speedY = speed !== undefined ? (sign2 * speed) : (sign2 * 10);
 	this.move = function(newX, newY){
 		this.posX = newX;
 		this.posY = newY;
@@ -52,11 +54,13 @@ function rect(id, width, height, posX, posY, speed, color){
 }
 	
 function random_rect(){
+	var WIDTH = $(document).width() -70;
+	var HEIGHT = $(document).height() - 70;
 	var id = unique_id();
 	var width = Math.ceil((Math.random() * 80) + 20);
 	var height = Math.ceil((Math.random() * 80) + 20);
-	var posX = Math.ceil(Math.random() * 1350);
-	var posY = Math.ceil(Math.random() * 720);
+	var posX = Math.ceil(Math.random() * WIDTH);
+	var posY = Math.ceil(Math.random() * HEIGHT);
 	var speed = Math.ceil(Math.random() * 20);
 	return (new rect(id, width, height, posX, posY, speed));
 }

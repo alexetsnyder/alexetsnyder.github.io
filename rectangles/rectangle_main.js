@@ -3,6 +3,8 @@ $(function(){
 	var time;
 	var animate = false;
 	var hand_generate = false;
+	var max_height = $(document).height() -50;
+	var max_width = $(document).width() - 50;
 	$("#quit").hide();
 	$("#generate").click(function(){
 		for (var i = 0; i < 10; ++i)
@@ -22,8 +24,8 @@ $(function(){
 		}
 	});
 	$("#animate").click(function(){
-		var max_height = 720;
-		var max_width = 1350;
+		//var max_height = 720;
+		//var max_width = 1350;
 		if (rects.length >= 1 && !animate)
 		{
 			animate = true;
@@ -60,5 +62,8 @@ $(function(){
 			});
 		else	
 			$(document).off("click");
+	});
+	$("#top").click(function(){
+		$("td").slideToggle("slow");
 	});
 });
