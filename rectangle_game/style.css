@@ -1,0 +1,23 @@
+body {
+	background-color: blue;
+}
+
+#winner, #loser {
+	position: absolute;
+	left: 565px;
+	top: 350px;
+	color: red;
+	font-weight: bold;
+	font-size: 450%;
+}
+
+table, tr, td {
+	border: 1px solid black;
+	background-color: grey;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+td { 
+	padding: 10px;
+}
