@@ -1,0 +1,33 @@
+#theword {
+	font-weight: bold;
+	font-size: 150%;
+}
+
+table {
+	border-color: white;
+	text-align: center;
+	vertical-align: center;
+}
+td {
+	padding: 20px;
+	font-weight: bold;
+	font-size: 120%;
+}
+button {
+	background-color: black;
+	color: white;
+	font-size: 80%;
+}
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+div {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+	font-size: 250%;
+}
+
