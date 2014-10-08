@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index Page.</title>
+		<script src="jquery-1.11.1.min.js"></script>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<table width="900">
+			<tr>
+				<th colspan="4">Paint Window</th>
+			<tr>
+				<td id="world_window" colspan="4">
+					<canvas id="world" width="900" height="400"></canvas>
+				</td>
+			</tr>
+			<tr>
+				<td id="shapes" width="20%">
+					<b>Shapes</b>
+					<form>
+					<input type="radio" name="shape" value="rect"> 
+						Rectangle
+					</input>
+					<br>
+					<input type="radio" name="shape" value="circle">
+						Circle
+					</input>
+					<br>
+					<input type="radio" name="shape" value="triangle">
+						Triangle
+					</input>
+					</form>
+					<br>
+					<button id="reset">Reset</button>
+				</td>
+				<td id="lines" width="20%">
+					<b>Lines</b>
+					<form>
+					<input type="checkbox" name="draw" value="line">
+						Draw Lines
+					</input>
+					<br>
+					<label>StartX:</label>
+					<input id="startX" readonly type="number" placeholder="0"></input>
+					<label>StartY:</label>
+					<input id="startY" readonly type="number" placeholder="0"></input>
+					<br>
+					<label>EndX:</label>
+					<input id="endX" readonly type="number" placeholder="0"></input>
+					<label>EndY:</label>
+					<input id="endY" readonly type="number" placeholder="0"></input>
+					</form>
+				</td>
+				<td id="colors" width="20%">
+					<b>Fill Colors</b>
+					<br>
+					<form>
+					<input type="checkbox" name="default" checked="true" value="color_default"> 
+						Default Color
+					</input>
+					<br>
+					<select disabled id="color">
+						<option value="none">None</option>
+						<option value="red">Red</option>
+						<option value="blue">Blue</option>
+						<option value="green">Green</option>
+						<option value="yellow">Yellow</option>
+						<option value="orange">Orange</option>
+						<option value="black">Black</option>
+						<option value="white">White</option>
+					</select>
+					</input>
+					</form>
+				</td>
+				<td id="info" width="20%">
+					<b>Fill Information</b>
+					<br>
+					<form>
+					<label>Width:</label>
+					<input id="width" type="number" placeholder="0"></input>
+					<label>Height:</label>
+					<input id="height" type="number" placeholder="0"></input>
+					<br>
+					<label>Radius:</label>
+					<input id="radius" type="number" placeholder="0"></script>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
