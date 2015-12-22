@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Coding Portfolio</title>
+	<head> 
+		<title>Classic Arcade</title>
 
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width = device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="index.css">
-		<script src="jquery-2.1.4.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		<script src="index.js"></script>
-	</head>
 
+		<style>
+			body {
+				background: blue;
+			}
+			canvas {
+				display: block;
+				margin: auto;
+				padding-bottom: 30px;
+				padding-top: 10px;
+			}
+		</style>
+		<script src="javascript/jquery-2.1.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="javascript/pong.js"></script>
+		<script src="javascript/snake.js"></script>
+	</head>
 	<body>
 		<!--The Navbar-->
 		<nav class="navbar navbar-inverse">
@@ -31,7 +40,7 @@
 
 				<div class="collapse navbar-collapse" id="navBar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="http://alexetsnyder.github.io">Home</a></li>
+					<li><a href="http://alexetsnyder.github.io">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
@@ -62,13 +71,5 @@
 				</div>
 			</div>
 		</nav> 
-
-		<!--The jumbotron-->
-		<div class="jumbotron">
-			<div class="container-fluid">
-				<h1>My Web Portfolio</h1>
-				<p> Different projects with html5 mostly in javascript and jQuery. In the future projects with WebGL and AngularJS.
-			</div>
-		</div>
 	</body>
 </html>
