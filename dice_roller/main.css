@@ -1,0 +1,53 @@
+body {
+	background-color: #684B6E;
+}
+
+input {
+	display: block;
+}
+
+h3 {
+	display: inline;
+}
+
+.d4 {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.d6 {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.d8 {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.d10 {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.d12 {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.d20 {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.d100 {
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
